@@ -5,9 +5,9 @@ The provided `Systems` are not standalone and are designed for use with the [`He
 ---  
 |    Systems    |            Description         |  
 | ------------- | ------------------------------ |  
-|  [`PluginManager`](https://github.com/NIKEA-SOFT/HelenaSystems/PluginManager) | Runtime (dll/so) plugins manager without abstraction |  
-|  [`ResourceManager`](https://github.com/NIKEA-SOFT/HelenaSystems/ResourceManager) | Storage for resources from data |  
-|  [`ECSManager`](https://github.com/NIKEA-SOFT/HelenaSystems/ECSManager) | System wrapper of [`EnTT`](https://github.com/skypjack/entt) |  
+|  [`PluginManager`](https://github.com/NIKEA-SOFT/HelenaSystems/tree/main/PluginManager) | Runtime (dll/so) plugins manager without abstraction |  
+|  [`ResourceManager`](https://github.com/NIKEA-SOFT/HelenaSystems/tree/main/ResourceManager) | Storage for resources from data |  
+|  [`ECSManager`](https://github.com/NIKEA-SOFT/HelenaSystems/tree/main/ECSManager) | System wrapper of [`EnTT`](https://github.com/skypjack/entt) |  
   
 **Usage:**  
 1\) Select a `System` folder from the list and copy to your project.  

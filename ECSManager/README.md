@@ -5,9 +5,9 @@
 |  [`EnTT`](https://github.com/skypjack/entt) | Entity Component System |  
    
 ##### Features  
-[x] Entity  
-[x] Components  
-[x] Events and signals  
+- [x] Entity  
+- [x] Components  
+- [x] Events and signals  
   
 ##### API  
 ---  
