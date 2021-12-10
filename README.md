@@ -38,7 +38,7 @@ int main(int argc, char** argv)
 ```  
   
 ---  
-> **Note:** You can add your implementations that solve a specific task to this repository. 
+> **Note:** You can add your implementations that solve a specific task to this repository.  
 > **License:** The `Systems` developed by `NIKEA-SOFT` are licensed by `MIT`.  
 > Libraries not owned by the developer `NIKEA-SOFT` contain their own license agreement.  
 > By using `Systems` that are implemented using `Dependencies` libraries,  
