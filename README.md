@@ -21,8 +21,8 @@ The provided `Systems` are not standalone and are designed for use with the [`He
 
 int main(int argc, char** argv)
 {
-    Helena::Engine::Context::Initialize();			// Initialize Context (Context used in Engine)
-    Helena::Engine::Context::SetMain([]()			// Register systems happen in this callback
+    Helena::Engine::Context::Initialize();  // Initialize Context (Context used in Engine)
+    Helena::Engine::Context::SetMain([]()   // Register systems happen in this callback
     {
         // Register all used systems
         Helena::Engine::RegisterSystem<Helena::Systems::EntityComponent>();
