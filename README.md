@@ -25,7 +25,7 @@ int main(int argc, char** argv)
     Helena::Engine::Context::SetMain([]()   // Register systems happen in this callback
     {
         // Register all used systems
-        Helena::Engine::RegisterSystem<Helena::Systems::EntityComponent>();
+        Helena::Engine::RegisterSystem<Helena::Systems::ResourceManager>();
         
         // Now we can get the system from anywhere
         // Helena::Engine::GetSystem<Helena::Systems::ResourceManager>();
