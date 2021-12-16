@@ -52,6 +52,6 @@ namespace Helena::Events::ResourceManager
     struct Remove {};
 }
 
-#include <Helena/Systems/ResourceManager.ipp>
+#include "ResourceManager.ipp"
 
 #endif // HELENA_SYSTEMS_RESOURCEMANAGER_HPP

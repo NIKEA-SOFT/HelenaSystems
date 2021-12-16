@@ -1,7 +1,8 @@
 #ifndef HELENA_SYSTEMS_ECSMANAGER_IPP
 #define HELENA_SYSTEMS_ECSMANAGER_IPP
 
-#include <Helena/Systems/ECSManager.hpp>
+#include "ECSManager.hpp"
+
 #include <Helena/Engine/Engine.hpp>
 #include <Helena/Traits/IntegralConstant.hpp>
 

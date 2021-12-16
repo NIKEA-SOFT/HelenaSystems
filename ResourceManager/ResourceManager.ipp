@@ -1,7 +1,8 @@
 #ifndef HELENA_SYSTEMS_RESOURCEMANAGER_IPP
 #define HELENA_SYSTEMS_RESOURCEMANAGER_IPP
 
-#include <Helena/Systems/ResourceManager.hpp>
+#include "ResourceManager.hpp"
+
 #include <Helena/Engine/Engine.hpp>
 
 namespace Helena::Systems

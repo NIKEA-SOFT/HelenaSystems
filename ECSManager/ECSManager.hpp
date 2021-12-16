@@ -178,6 +178,6 @@ namespace Helena::Events::ECSManager
     };
 }
 
-#include <Helena/Systems/ECSManager.ipp>
+#include "ECSManager.ipp"
 
 #endif // HELENA_SYSTEMS_ECSMANAGER_HPP

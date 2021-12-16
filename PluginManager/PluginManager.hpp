@@ -86,6 +86,6 @@ namespace Helena::Events::PluginManager
     };
 }
 
-#include <Helena/Systems/PluginManager.ipp>
+#include "PluginManager.ipp"
 
 #endif // HELENA_SYSTEMS_PLUGINMANAGER_HPP

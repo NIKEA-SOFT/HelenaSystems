@@ -1,7 +1,8 @@
 #ifndef HELENA_SYSTEMS_PLUGINMANAGER_IPP
 #define HELENA_SYSTEMS_PLUGINMANAGER_IPP
 
-#include <Helena/Systems/PluginManager.hpp>
+#include "PluginManager.hpp"
+
 #include <Helena/Types/Hash.hpp>
 
 namespace Helena::Systems
