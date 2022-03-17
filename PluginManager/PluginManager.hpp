@@ -6,7 +6,7 @@
 
 namespace Helena::Systems
 {
-    class PluginManager 
+    class PluginManager
     {
     public:
         using PluginName   = Types::FixedBuffer<30>;
@@ -47,7 +47,7 @@ namespace Helena::Systems
 
         [[nodiscard]] auto Find(std::uint32_t hash) const noexcept;
         [[nodiscard]] auto Find(std::uint32_t hash) noexcept;
-        
+
     public:
         PluginManager() = default;
         ~PluginManager();
@@ -61,7 +61,7 @@ namespace Helena::Systems
         [[nodiscard]] bool Init(const PluginName& name);
         [[nodiscard]] bool End(const PluginName& name);
         [[nodiscard]] bool Has(const PluginName& name) const noexcept;
-        [[nodiscard]] bool IsInitialized(const PluginName& name) const noexcept;
+        [[nodiscard]] bool Initialized(const PluginName& name) const noexcept;
 
         template <typename Func>
         void Each(Func callback) const;
@@ -74,14 +74,6 @@ namespace Helena::Systems
 namespace Helena::Events::PluginManager
 {
     struct Load {
-        const Systems::PluginManager::PluginName& name;
-    };
-
-    struct PluginInit {
-        const Systems::PluginManager::PluginName& name;
-    };
-
-    struct PluginEnd {
         const Systems::PluginManager::PluginName& name;
     };
 }

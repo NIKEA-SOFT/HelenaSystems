@@ -7,9 +7,9 @@
 
 namespace Helena::Systems
 {
-	inline PluginManager::~PluginManager() 
+	inline PluginManager::~PluginManager()
 	{
-		for(auto& plugin : m_Plugins) 
+		for(auto& plugin : m_Plugins)
 		{
 			if(plugin.m_State == EState::Init) {
 				plugin.m_fnEnd();
@@ -39,7 +39,7 @@ namespace Helena::Systems
 		HELENA_ASSERT(Find(hash) == m_Plugins.cend(), "Plugin: {} already loaded!", name);
 		HELENA_ASSERT((path.size() + name.GetSize() + sizeof(HELENA_SEPARATOR) + sizeof(HELENA_MODULE_EXTENSION)) <= PathLength);
 
-		const auto module = path.empty() ? 
+		const auto module = path.empty() ?
 			Types::Format<PathLength>("{}{}", name, HELENA_MODULE_EXTENSION) :
 			Types::Format<PathLength>("{}{}{}{}", path, HELENA_SEPARATOR, name, HELENA_MODULE_EXTENSION);
 		const auto handle = static_cast<HELENA_MODULE_HANDLE>(HELENA_MODULE_LOAD(module.GetData()));
@@ -78,7 +78,7 @@ namespace Helena::Systems
 		HELENA_ASSERT(it != m_Plugins.cend(), "Plugin: {} not loaded!", name);
 		HELENA_ASSERT(it->m_State == EState::Loaded, "Plugin: {} already initialized!", name);
 
-		if(it != m_Plugins.cend() && it->m_State == EState::Loaded) 
+		if(it != m_Plugins.cend() && it->m_State == EState::Loaded)
 		{
 			it->m_State = EState::Init;
 			it->m_fnInit(Engine::Context::Get());
@@ -109,13 +109,13 @@ namespace Helena::Systems
 		return Find(Hash::Get<std::uint32_t>(name)) != m_Plugins.cend();
 	}
 
-	[[nodiscard]] inline bool PluginManager::IsInitialized(const PluginName& name) const noexcept {
+	[[nodiscard]] inline bool PluginManager::Initialized(const PluginName& name) const noexcept {
 		const auto it = Find(Hash::Get<std::uint32_t>(name));
 		return it != m_Plugins.cend() && it->m_State == EState::Init;
 	}
 
 	template <typename Func>
-	void PluginManager::Each(Func callback) const 
+	void PluginManager::Each(Func callback) const
 	{
 		for(std::size_t i = m_Plugins.size(); i; --i) {
 			callback(m_Plugins[i - 1].m_Name);
