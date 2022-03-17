@@ -1,34 +1,34 @@
 # HelenaSystems  
 This repository contains set of `Systems` for solve a specific task.  
 The provided `Systems` are not standalone and are designed for use with the [`HelenaFramework`](https://github.com/NIKEA-SOFT/HelenaFramework).  
-  
+
 ---  
 |    Systems    |            Description         |  
 | ------------- | ------------------------------ |  
 |  [`PluginManager`](https://github.com/NIKEA-SOFT/HelenaSystems/tree/main/PluginManager) | Runtime (dll/so) plugins manager without abstraction |  
 |  [`ResourceManager`](https://github.com/NIKEA-SOFT/HelenaSystems/tree/main/ResourceManager) | Storage for resources from data |  
 |  [`ECSManager`](https://github.com/NIKEA-SOFT/HelenaSystems/tree/main/ECSManager) | System wrapper of [`EnTT`](https://github.com/skypjack/entt) |  
-  
+|  [`NetworkManager`](https://github.com/NIKEA-SOFT/HelenaSystems/tree/main/NetworkManager) | RUDP network manager |  
+
 **Usage:**  
 1\) Select a `System` folder from the list and copy to your project.  
 2\) Include header in your code.  
 3\) Use `HelenaFramework` for register or get system.  
-  
+
 **Example:**  
-```C++ 
+```C++
 #include <Helena/Engine/Engine.hpp>
 #include <MyProject/Systems/ResourceManager/ResourceManager.hpp>
 
 int main(int argc, char** argv)
 {
     Helena::Engine::Context::Initialize();  // Initialize Context (Context used in Engine)
-    Helena::Engine::Context::SetMain([]()   // Register systems happen in this callback
-    {
+    Helena::Engine::Context::SetMain([]() { // Register systems happen in this callback
         // Register all used systems
         Helena::Engine::RegisterSystem<Helena::Systems::ResourceManager>();
-        
+
         // Now we can get the system from anywhere
-        // Helena::Engine::GetSystem<Helena::Systems::ResourceManager>();
+        auto& resManager = Helena::Engine::GetSystem<Helena::Systems::ResourceManager>();
     });
 
     // Engine loop
@@ -36,7 +36,7 @@ int main(int argc, char** argv)
     return 0;
 }
 ```  
-  
+
 ---  
 > **Note:** You can add your implementations that solve a specific task to this repository.  
 > **License:** The `Systems` developed by `NIKEA-SOFT` are licensed by `MIT`.  
