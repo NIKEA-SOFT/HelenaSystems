@@ -31,7 +31,7 @@ bool Load(const std::string_view path, const PluginName& name)
 > You don't need to specify the extension, it is detected automatically  
 > The path relative to the working directory is used  
 ```C++
-bool Load(const std::string_view path, const PluginName& name)
+bool Load(const PluginName& name)
 ```
 ---
 > Description: Initialize plugin  
